@@ -1,0 +1,25 @@
+" let Vundle manage Vundle (required)
+Bundle "gmarik/vundle"
+
+" Javascript/Coffeescript
+Bundle "pangloss/vim-javascript"
+Bundle "itspriddle/vim-jquery.git"
+Bundle "kchmck/vim-coffee-script"
+
+" File system
+Bundle "scrooloose/nerdtree.git"
+Bundle "kien/ctrlp.vim"
+
+" Cosmetics 
+Bundle "bling/vim-airline.git"
+
+" Git
+Bundle "tpope/vim-fugitive"
+Bundle "tpope/vim-git"
+
+" Editing
+Bundle "tpope/vim-surround"
+Bundle "scrooloose/nerdcommenter"
+
+" Motions
+Bundle "Lokaltog/vim-easymotion"

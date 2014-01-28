@@ -1,9 +1,6 @@
 # Path to oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
 
-# ZSH Theme
-# ZSH_THEME="pure"
-
 # oh-my-zsh plugins
 plugins=(git git-extras github autojump brew npm osx)
 
