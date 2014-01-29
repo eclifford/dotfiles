@@ -1,6 +1,9 @@
 " colorscheme
 colorscheme smyck 
 
+" reduce command delay
+set timeoutlen=1000 ttimeoutlen=0
+
 " cursorline
 hi CursorLine   cterm=NONE ctermbg=235
 set cursorline
