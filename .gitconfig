@@ -1,0 +1,7 @@
+[user]
+	email = ericgclifford@gmail.com
+	name = Eric Clifford
+[push]
+	default = simple
+[core]
+	editor = vim
