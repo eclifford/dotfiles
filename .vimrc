@@ -1,12 +1,15 @@
 " colorscheme
 colorscheme smyck 
 
+" reduce command delay
+set timeoutlen=1000 ttimeoutlen=100
+
 " cursorline
 hi CursorLine   cterm=NONE ctermbg=235
 set cursorline
 
 " powerline
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
+" set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
 
 " Always show statusline
 set laststatus=2
@@ -71,6 +74,9 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+map <C-s> :w<CR>
+vmap <C-s> <C-c>:w<CR>
+imap <C-s> <C-c>:w<CR>
 map <leader>l :Align
 nmap <leader>a :Ack<space>
 nmap <leader>b :CtrlPBuffer<CR>
@@ -84,10 +90,16 @@ nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>c <Plug>Kwbd
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
-"fast switching between tabs
+"fast switching between buffers 
 map gn :bn<cr>
 map gp :bp<cr>
-map gd :bd<cr>
+
+"close buffer while opening next(no buffer left behind!)
+map gd :bp<bar>:bd #<CR>
+
+map tn :tabnext<cr>
+map tp :tabprevious<cr>
+map td :tabclose<cr>
 
 " in case you forgot to sudo
 cmap w!! %!sudo tee > /dev/null %
@@ -96,6 +108,7 @@ cmap w!! %!sudo tee > /dev/null %
 let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:NERDSpaceDelims=1
 let g:gitgutter_enabled = 0
+let g:airline#extensions#tabline#enabled = 0
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
