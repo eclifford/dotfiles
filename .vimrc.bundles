@@ -5,9 +5,11 @@ Bundle "gmarik/vundle"
 Bundle "pangloss/vim-javascript"
 Bundle "itspriddle/vim-jquery.git"
 Bundle "kchmck/vim-coffee-script"
+Bundle "digitaltoad/vim-jade"
 
 " File system
 Bundle "scrooloose/nerdtree.git"
+" Bundle "jistr/vim-nerdtree-tabs"
 Bundle "kien/ctrlp.vim"
 
 " Cosmetics 
