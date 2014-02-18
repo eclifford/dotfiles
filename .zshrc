@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # oh-my-zsh plugins
-plugins=(git git-extras github autojump brew npm osx)
+plugins=(git git-extras github autojump brew npm osx vi-mode tmux tmuxinator taskwarrior)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -16,4 +16,9 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
 # export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# Disable flow control
+stty -ixon -ixoff
+
 ulimit -n 1024
+
+export ZSH_TMUX_AUTOSTART=true
