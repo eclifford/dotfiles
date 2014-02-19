@@ -109,6 +109,9 @@ let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:NERDSpaceDelims=1
 let g:gitgutter_enabled = 0
 let g:airline#extensions#tabline#enabled = 0
+" let g:user_emmet_expandabbr_key = '<Tab>'
+" let g:user_emmet_complete_tag = 1
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
@@ -125,6 +128,9 @@ endif
 autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
 " md is markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+" ejs is html
+autocmd BufRead,BufNewFile *.ejs set filetype=html
+
 " extra rails.vim help
 autocmd User Rails silent! Rnavcommand decorator      app/decorators            -glob=**/* -suffix=_decorator.rb
 autocmd User Rails silent! Rnavcommand observer       app/observers             -glob=**/* -suffix=_observer.rb

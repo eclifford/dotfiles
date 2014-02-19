@@ -6,6 +6,7 @@ Bundle "pangloss/vim-javascript"
 Bundle "itspriddle/vim-jquery.git"
 Bundle "kchmck/vim-coffee-script"
 Bundle "digitaltoad/vim-jade"
+Bundle "mattn/emmet-vim"
 
 " File system
 Bundle "scrooloose/nerdtree.git"
