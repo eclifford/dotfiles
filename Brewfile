@@ -24,7 +24,13 @@ install homebrew/dupes/grep
 install ack
 install git
 install node
-install python 
+install python
+install rbenv
+install ruby-build
+install phantomjs
+install tmux
+install maven
+install autojump
 
 # Remove oudated versions from the cellar
 cleanup
