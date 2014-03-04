@@ -7,3 +7,5 @@
 	editor = vim
 [credential]
 	helper = osxkeychain
+[github]
+	user = eclifford

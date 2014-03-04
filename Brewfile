@@ -31,6 +31,8 @@ install phantomjs
 install tmux
 install maven
 install autojump
+# TMUX copy and paste with OSX
+install reattach-to-user-namespace
 
 # Remove oudated versions from the cellar
 cleanup
