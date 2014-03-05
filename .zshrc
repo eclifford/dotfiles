@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # oh-my-zsh plugins
-plugins=(git git-extras github autojump brew npm osx vi-mode tmux tmuxinator taskwarrior)
+plugins=(git git-extras github autojump brew npm osx vi-mode tmux tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -22,3 +22,4 @@ stty -ixon -ixoff
 ulimit -n 1024
 
 export ZSH_TMUX_AUTOSTART=true
+export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"

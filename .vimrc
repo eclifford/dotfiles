@@ -17,6 +17,9 @@ set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
+" Use Bash 
+set shell=bash\ -i
+
 " don't bother with vi compatibility
 set nocompatible
 
@@ -36,6 +39,7 @@ endif
 
 " ensure ftdetect et al work by including this after the Vundle stuff
 filetype plugin indent on
+filetype plugin on
 
 set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`

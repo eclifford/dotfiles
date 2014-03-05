@@ -8,6 +8,7 @@ Bundle "kchmck/vim-coffee-script"
 Bundle "digitaltoad/vim-jade"
 Bundle "mattn/emmet-vim"
 Bundle "scrooloose/syntastic"
+Bundle "suan/vim-instant-markdown"
 
 " File system
 Bundle "scrooloose/nerdtree.git"

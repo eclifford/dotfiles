@@ -31,6 +31,8 @@ install phantomjs
 install tmux
 install maven
 install autojump
+install the_silver_searcher
+
 # TMUX copy and paste with OSX
 install reattach-to-user-namespace
 
