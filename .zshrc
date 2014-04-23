@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="pure"
 
 # oh-my-zsh plugins
-plugins=(git git-extras github autojump brew npm osx vi-mode tmux tmuxinator)
+plugins=(git git-extras github autojump per-directory-history brew npm osx tmux tmuxinator)
 
 source $ZSH/oh-my-zsh.sh
 
