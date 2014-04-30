@@ -38,3 +38,7 @@ Bundle "Lokaltog/vim-easymotion"
 " Dash 
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
+
+" vim-notes
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-notes'

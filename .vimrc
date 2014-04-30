@@ -85,6 +85,9 @@ map <leader>l :Align
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
+" Vim notes
+let g:notes_directories = ['~/Dropbox/VIM-Notes']
+
 "fast switching between buffers 
 map gn :bn<cr>
 map gp :bp<cr>
