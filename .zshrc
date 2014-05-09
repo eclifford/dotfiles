@@ -24,3 +24,6 @@ ulimit -n 1024
 
 # export ZSH_TMUX_AUTOSTART=true
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
+
+# added by travis gem
+[ -f /Users/eclifford/.travis/travis.sh ] && source /Users/eclifford/.travis/travis.sh
