@@ -87,6 +87,7 @@ map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimr
 
 " Vim notes
 let g:notes_directories = ['~/Dropbox/VIM-Notes']
+let g:notes_suffix = '.markdown'
 
 "fast switching between buffers 
 map gn :bn<cr>

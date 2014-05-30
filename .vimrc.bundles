@@ -42,3 +42,4 @@ Bundle 'rizzatti/dash.vim'
 " vim-notes
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
+Bundle 'itspriddle/vim-marked'

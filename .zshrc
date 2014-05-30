@@ -20,7 +20,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Disable flow control
 stty -ixon -ixoff
 
-ulimit -n 1024
+ulimit -n 9999 
 
 # export ZSH_TMUX_AUTOSTART=true
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
