@@ -1,0 +1,24 @@
+"*":
+  "exception-reporting":
+    userId: "3e2dc0b9-9497-8aba-ac39-288649bc0965"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "b4cd2c38d2fe6c209a73b4eceaa4fd6f74c21353"
+  core:
+    excludeVcsIgnoredPaths: false
+    disabledPackages: [
+      "linter-coffeelint"
+    ]
+    themes: [
+      "spacegray-dark-ui"
+      "spacegray-dark-syntax"
+    ]
+    projectHome: "/Users/eric.clifford/projects"
+  editor:
+    fontSize: 14
+    showInvisibles: true
+    showIndentGuide: true
+    invisibles: {}
+  linter: {}
+  "linter-rust": {}

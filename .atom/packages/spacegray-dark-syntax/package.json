@@ -1,0 +1,26 @@
+{
+  "name": "spacegray-dark-syntax",
+  "theme": "syntax",
+  "version": "0.2.0",
+  "description": "Port of the Spacegray Sublime Theme (Default theme - Dark)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pauloacmelo/spacegray-dark-syntax"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readme": "# Spacegray Dark Syntax Theme\n\nPort of the [Spacegray](http://kkga.github.io/spacegray) Sublime Theme for Atom Syntax.\n\nBest used with the [Spacegray Dark UI](https://atom.io/packages/spacegray-dark-ui) theme\n\n![Screenshot](http://recordit.co/tJyAZ2p75C.gif)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/pauloacmelo/spacegray-dark-syntax/issues"
+  },
+  "homepage": "https://github.com/pauloacmelo/spacegray-dark-syntax",
+  "_id": "spacegray-dark-syntax@0.2.0",
+  "dist": {
+    "shasum": "5793ab9a5aa06df84be2879d08fd81699eb81fd7"
+  },
+  "_resolved": "/var/folders/6l/w2trbc3s5fnbmjpkhccbjz88tghbb1/T/d-114427-63924-15dek2z/package.tgz",
+  "_from": "/var/folders/6l/w2trbc3s5fnbmjpkhccbjz88tghbb1/T/d-114427-63924-15dek2z/package.tgz"
+}

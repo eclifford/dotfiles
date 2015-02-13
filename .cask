@@ -35,4 +35,4 @@ installcask rdio
 installcask dash
 installcask vagrant
 installcask pckeyboardhack
-installcas keyremap4macbook
+installcask keyremap4macbook

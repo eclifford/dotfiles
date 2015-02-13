@@ -1,0 +1,5 @@
+'wdsync':
+  'title': 'wdsync'
+  'paths': [
+    '/Projects/akqa/grunt-webdav-sync'
+  ]

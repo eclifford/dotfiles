@@ -1,0 +1,26 @@
+{
+  "name": "spacegray-light-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "Port of the Spacegray Sublime Theme for Atom Syntax",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aesarius/spacegray-light-syntax"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readme": "# Spacegray Light Syntax for Atom\n\nPort of the [Spacegray Light Theme](http://kkga.github.io/spacegray) Sublime Theme for Atom Syntax.\n\n![Screenshot](http://i.imgur.com/d5maNSZ.png)\n\nBest used with the [Spacegray Light Ui](https://github.com/aesarius/spacegray-light-ui) theme\n\nGrab the [Anonymous Pro Font](http://www.marksimonson.com/fonts/view/anonymous-pro)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/aesarius/spacegray-light-syntax/issues"
+  },
+  "homepage": "https://github.com/aesarius/spacegray-light-syntax",
+  "_id": "spacegray-light-syntax@0.1.0",
+  "dist": {
+    "shasum": "595d1bd90e7d268ee168fafa0cdfbb6a9416f06b"
+  },
+  "_resolved": "/var/folders/6l/w2trbc3s5fnbmjpkhccbjz88tghbb1/T/d-114427-63916-ak0q63/package.tgz",
+  "_from": "/var/folders/6l/w2trbc3s5fnbmjpkhccbjz88tghbb1/T/d-114427-63916-ak0q63/package.tgz"
+}
