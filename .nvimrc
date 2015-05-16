@@ -1,5 +1,10 @@
 " colorscheme
-colorscheme smyck 
+colorscheme smyck
+
+" HACK: NeoVim has an issue with cntrl h 
+if has('nvim')
+  nmap <BS> <C-W>h
+endif
 
 " reduce command delay
 set timeoutlen=1000 ttimeoutlen=100
@@ -8,17 +13,14 @@ set timeoutlen=1000 ttimeoutlen=100
 hi CursorLine   cterm=NONE ctermbg=235
 set cursorline
 
-" powerline
-" set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim/
-
 " Always show statusline
 set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
-" Use Bash 
-set shell=bash\ -i
+" HACK: currently unstable in NEOVIM Use Bash
+" set shell=bash\ -i
 
 " don't bother with vi compatibility
 set nocompatible
@@ -27,15 +29,25 @@ set nocompatible
 syntax enable
 
 " configure Vundle
-filetype on " without this vim emits a zero exit status, later, because of :ft off
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"filetype on " without this vim emits a zero exit status, later, because of :ft off
+"filetype off
+"set rtp+=~/.nvim/bundle/vundle/
+"call vundle#rc()
 
 " install Vundle bundles
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
+"if filereadable(expand("~/.nvimrc.bundles"))
+""  source ~/.nvimrc.bundles
+"endif
+
+call plug#begin()
+
+Plug 'bling/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'whatyouhide/vim-gotham'
+Plug 'mustache/vim-mustache-handlebars'
+
+call plug#end()
 
 " ensure ftdetect et al work by including this after the Vundle stuff
 filetype plugin indent on
@@ -45,7 +57,7 @@ set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
 set backspace=2                                              " Fix broken backspace in some setups
 set backupcopy=yes                                           " see :help crontab
-set clipboard=unnamed                                        " yank and paste with the system clipboard
+set clipboard=unnamedplus                                    " yank and paste with the system clipboard
 set directory-=.                                             " don't store swapfiles in the current directory
 set encoding=utf-8
 set expandtab                                                " expand tabs to spaces
@@ -53,15 +65,16 @@ set ignorecase                                               " case-insensitive 
 set incsearch                                                " search as you type
 set laststatus=2                                             " always show statusline
 set list                                                     " show trailing whitespace
-set listchars=tab:▸\ ,trail:▫
+set listchars=trail:▫
 set number                                                   " show line numbers
+set nolist
 set ruler                                                    " show where you are
 set scrolloff=3                                              " show context above/below cursorline
 set shiftwidth=2                                             " normal mode indentation commands use 2 spaces
 set showcmd
 set smartcase                                                " case-sensitive search if any caps
 set softtabstop=2                                            " insert mode tab and backspace use 2 spaces
-set tabstop=8                                                " actual tabs occupy 8 characters
+set tabstop=2                                                " actual tabs occupy 8 characters
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a navigable menu for tab completion
 set wildmode=longest,list,full
@@ -83,13 +96,9 @@ vmap <C-s> <C-c>:w<CR>
 imap <C-s> <C-c>:w<CR>
 map <leader>l :Align
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
-map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+map <silent> <leader>V :source ~/.nvimrc<CR>:filetype detect<CR>:exe ":echo 'nvimrc reloaded'"<CR>
 
-" Vim notes
-let g:notes_directories = ['~/Dropbox/VIM-Notes']
-let g:notes_suffix = '.markdown'
-
-"fast switching between buffers 
+"fast switching between buffers
 map gn :bn<cr>
 map gp :bp<cr>
 
@@ -131,7 +140,7 @@ autocmd BufRead,BufNewFile *.ejs set filetype=html
 autocmd VimResized * :wincmd =
 
 " VANITY
-:set fillchars+=vert:\ 
+:set fillchars+=vert:\
 :highlight NonText ctermfg=grey
 
 " Fix Cursor in TMUX
@@ -144,7 +153,7 @@ else
 endif
 
 " Go crazy!
-if filereadable(expand("~/.vimrc.local"))
+if filereadable(expand("~/.nvimrc.local"))
   " In your .vimrc.local, you might like:
   "
   " set autowrite
