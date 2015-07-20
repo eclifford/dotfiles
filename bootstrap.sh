@@ -11,7 +11,6 @@ function doIt() {
 	ln -sf $PWD/.nvim ~/.nvim
 	ln -s $PWD/.oh-my-zsh ~/.oh-my-zsh
 	ln -s $PWD/.nvimrc ~/.nvimrc
-	ln -s $PWD/.nvimrc.bundles ~/.nvimrc.bundles
 	ln -s $PWD/.zshrc ~/.zshrc
 	ln -s $PWD/.wgetrc ~/.wgetrc
 	ln -s $PWD/.tmux.conf ~/.tmux.conf

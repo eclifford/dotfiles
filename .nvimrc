@@ -1,6 +1,9 @@
 " colorscheme
 colorscheme smyck
 
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let NERDTreeShowHidden=1
+
 " HACK: NeoVim has an issue with cntrl h 
 if has('nvim')
   nmap <BS> <C-W>h
@@ -28,18 +31,8 @@ set nocompatible
 " enable syntax highlighting
 syntax enable
 
-" configure Vundle
-"filetype on " without this vim emits a zero exit status, later, because of :ft off
-"filetype off
-"set rtp+=~/.nvim/bundle/vundle/
-"call vundle#rc()
-
-" install Vundle bundles
-"if filereadable(expand("~/.nvimrc.bundles"))
-""  source ~/.nvimrc.bundles
-"endif
-
-call plug#begin()
+" install plugins
+call plug#begin('~/.nvim/plugged')
 
 Plug 'bling/vim-airline'
 Plug 'scrooloose/nerdtree'

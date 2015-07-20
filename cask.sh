@@ -17,9 +17,9 @@ installcask hipchat
 installcask slack
 
 # browsers
-installcask google-chrome
-installcask google-chrome-canary
-installcask firefox
+# installcask google-chrome
+# installcask google-chrome-canary
+# installcask firefox 
 
 # dev
 installcask iterm2
@@ -46,4 +46,4 @@ installcask vlc
 installcask anki
 installcask charles
 installcask cyberduck
-installcask google-drive
+# installcask google-drive
