@@ -7,6 +7,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # install cask
 brew tap phinze/homebrew-cask
 brew install brew-cask
+brew tap caskroom/versions
 
 function installcask() {
   brew cask install "${@}" 2> /dev/null
@@ -22,7 +23,7 @@ installcask slack
 # installcask firefox 
 
 # dev
-installcask iterm2
+installcask iterm2-nightly
 installcask transmit
 installcask tower
 installcask dash
