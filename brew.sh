@@ -12,7 +12,7 @@ then
   # Install Homebrew
   # https://github.com/mxcl/homebrew/wiki/installation
   echo 'installing homebrew'
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Make sure we’re using the latest Homebrew
