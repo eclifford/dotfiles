@@ -18,9 +18,9 @@ installcask hipchat
 installcask slack
 
 # browsers
-# installcask google-chrome
-# installcask google-chrome-canary
-# installcask firefox 
+installcask google-chrome
+installcask google-chrome-canary
+installcask firefox 
 
 # dev
 installcask iterm2-nightly
@@ -48,4 +48,10 @@ installcask vlc
 installcask anki
 installcask charles
 installcask cyberduck
-# installcask google-drive
+installcask google-drive
+
+# fonts (https://github.com/caskroom/homebrew-fonts/tree/master/Casks)
+brew tap caskroom/fonts
+brew cask install font-sauce-code-powerline
+
+brew cleanup
