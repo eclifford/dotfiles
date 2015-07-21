@@ -32,6 +32,7 @@ installcask vagrant
 # apps
 installcask spotify
 installcask cleanmymac
+installcask kindle
 
 # utils
 installcask alfred

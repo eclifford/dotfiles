@@ -1,8 +1,11 @@
 " colorscheme
+set background=dark
 colorscheme smyck
 
+" allow ITERM to show true colors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let NERDTreeShowHidden=1
+let python_highlight_all=1
 
 " HACK: NeoVim has an issue with cntrl h 
 if has('nvim')
@@ -20,7 +23,7 @@ set cursorline
 set laststatus=2
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
-set t_Co=256
+"set t_Co=256
 
 " HACK: currently unstable in NEOVIM Use Bash
 " set shell=bash\ -i
@@ -31,16 +34,10 @@ set nocompatible
 " enable syntax highlighting
 syntax enable
 
-" install plugins
-call plug#begin('~/.nvim/plugged')
-
-Plug 'bling/vim-airline'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'whatyouhide/vim-gotham'
-Plug 'mustache/vim-mustache-handlebars'
-
-call plug#end()
+" load plugins managed by vim-plug
+if filereadable(expand("~/.nvimrc.plugins"))
+  source ~/.nvimrc.plugins
+endif
 
 " ensure ftdetect et al work by including this after the Vundle stuff
 filetype plugin indent on
@@ -118,7 +115,7 @@ if executable('ag')
 endif
 
 " bind \ (backward slash) to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+" command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap \ :Ag<SPACE>
 
@@ -156,5 +153,5 @@ if filereadable(expand("~/.nvimrc.local"))
   "
   " autocmd! bufwritepost .vimrc source ~/.vimrc
   " noremap! jj <ESC>
-  source ~/.vimrc.local
+  source ~/.nvimrc.local
 endif

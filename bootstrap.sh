@@ -14,7 +14,8 @@ function doIt() {
 	ln -s $PWD/.zshrc ~/.zshrc
 	ln -s $PWD/.wgetrc ~/.wgetrc
 	ln -s $PWD/.tmux.conf ~/.tmux.conf
-	ln -s $PWD/.gitignore_global ~/.gitignore_global
+	ln -s $PWD/.gitignore ~/.gitignore
+	ln -s $PWD/.gitattributes ~/.gitattributes
 	ln -s $PWD/.gitconfig ~/.gitconfig
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

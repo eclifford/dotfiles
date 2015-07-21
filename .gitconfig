@@ -5,7 +5,15 @@
 	default = simple
 [core]
 	editor = vim
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
 [credential]
 	helper = osxkeychain
 [github]
 	user = eclifford
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

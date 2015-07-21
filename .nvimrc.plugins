@@ -1,0 +1,10 @@
+" install plugins
+call plug#begin('~/.nvim/plugged')
+
+Plug 'bling/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'whatyouhide/vim-gotham'
+Plug 'mustache/vim-mustache-handlebars'
+
+call plug#end()
