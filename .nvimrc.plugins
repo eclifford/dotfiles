@@ -1,10 +1,20 @@
 " install plugins
 call plug#begin('~/.nvim/plugged')
 
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-Plug 'whatyouhide/vim-gotham'
-Plug 'mustache/vim-mustache-handlebars'
-
+Plug 'scrooloose/syntastic'
+Plug 'kien/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'stephpy/vim-yaml'
+Plug 'mattn/emmet-vim'
+Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'groenewege/vim-less'
+Plug 'altercation/vim-colors-solarized'
+" Plug 'davidhalter/jedi-vim'
+" Plug 'jelera/vim-javascript-syntax'
 call plug#end()

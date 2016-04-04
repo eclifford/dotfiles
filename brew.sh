@@ -52,6 +52,7 @@ install homebrew/dupes/grep
 
 # Install other binaries
 install ack
+install ant
 install git
 install node
 install python

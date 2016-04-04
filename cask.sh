@@ -13,6 +13,9 @@ function installcask() {
   brew cask install "${@}" 2> /dev/null
 }
 
+# java
+installcask java6
+
 # comm
 installcask hipchat
 installcask slack

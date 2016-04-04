@@ -1,9 +1,11 @@
-" colorscheme
+" VISUAL (Vanity)
 set background=dark
 colorscheme smyck
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1                        " allows pipe(insert) and block cursor(edit)
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1                          " allow ITERM to show true colors
 
-" allow ITERM to show true colors
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" Settings
+let javascript_enable_domhtmlcss=1
 let NERDTreeShowHidden=1
 let python_highlight_all=1
 
@@ -22,24 +24,11 @@ set cursorline
 " Always show statusline
 set laststatus=2
 
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
-"set t_Co=256
-
-" HACK: currently unstable in NEOVIM Use Bash
-" set shell=bash\ -i
-
 " don't bother with vi compatibility
 set nocompatible
-
 " enable syntax highlighting
 syntax enable
 
-" load plugins managed by vim-plug
-if filereadable(expand("~/.nvimrc.plugins"))
-  source ~/.nvimrc.plugins
-endif
-
-" ensure ftdetect et al work by including this after the Vundle stuff
 filetype plugin indent on
 filetype plugin on
 
@@ -51,17 +40,21 @@ set clipboard=unnamedplus                                    " yank and paste wi
 set directory-=.                                             " don't store swapfiles in the current directory
 set encoding=utf-8
 set expandtab                                                " expand tabs to spaces
+set gdefault                                                 " add the g flat to search/replace by default
 set ignorecase                                               " case-insensitive search
 set incsearch                                                " search as you type
 set laststatus=2                                             " always show statusline
 set list                                                     " show trailing whitespace
 set listchars=trail:▫
+set mouse=a                                                  " enable mouse
 set number                                                   " show line numbers
+set noerrorbells                                             " disable error bells
 set nolist
 set ruler                                                    " show where you are
 set scrolloff=3                                              " show context above/below cursorline
 set shiftwidth=2                                             " normal mode indentation commands use 2 spaces
-set showcmd
+set showcmd                                                  " show the command as it's being typed
+set showmode                                                 " show the current mode
 set smartcase                                                " case-sensitive search if any caps
 set softtabstop=2                                            " insert mode tab and backspace use 2 spaces
 set tabstop=2                                                " actual tabs occupy 8 characters
@@ -69,23 +62,18 @@ set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                                 " show a navigable menu for tab completion
 set wildmode=longest,list,full
 
-" Enable basic mouse behavior such as resizing buffers.
-set mouse=a
-if exists('$TMUX')  " Support resizing in tmux
-  set ttymouse=xterm2
-endif
-
 " keyboard shortcuts
 let mapleader = ','
-map <C-h> <C-w>h
+" navigate windows
+map <C-h> <C-w>h              
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+" save 
 map <C-s> :w<CR>
 vmap <C-s> <C-c>:w<CR>
 imap <C-s> <C-c>:w<CR>
-map <leader>l :Align
-nmap <leader><space> :call whitespace#strip_trailing()<CR>
+
 map <silent> <leader>V :source ~/.nvimrc<CR>:filetype detect<CR>:exe ":echo 'nvimrc reloaded'"<CR>
 
 "fast switching between buffers
@@ -98,6 +86,8 @@ map gd :bp<bar>:bd #<CR>
 map tn :tabnext<cr>
 map tp :tabprevious<cr>
 map td :tabclose<cr>
+"esc clears search results
+nnoremap <esc> :noh<return><esc>
 
 " in case you forgot to sudo
 cmap w!! %!sudo tee > /dev/null %
@@ -119,28 +109,29 @@ endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap \ :Ag<SPACE>
 
-" fdoc is yaml
-autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
-" md is markdown
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-" ejs is html
-autocmd BufRead,BufNewFile *.ejs set filetype=html
+" load plugins managed by vim-plug
+if filereadable(expand("~/.nvimrc.plugins"))
+  source ~/.nvimrc.plugins
+endif
 
-" automatically rebalance windows on vim resize
-autocmd VimResized * :wincmd =
+" automatic commands
+if has("autocmd")
+  " JSON as js
+  autocmd BufRead, BufNewFile *.json set filetype=json syntax=javascript
+  " fdoc is yaml
+  autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
+  " md is markdown
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+  " ejs is html
+  autocmd BufRead,BufNewFile *.ejs set filetype=html
+  " automatically rebalance windows on vim resize
+  autocmd VimResized * :wincmd =
+endif
 
 " VANITY
-:set fillchars+=vert:\
+:set fillchars+=vert:\ 
 :highlight NonText ctermfg=grey
-
-" Fix Cursor in TMUX
-if exists('$TMUX')
-  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
+:highlight VertSplit guifg=#5D5D5D
 
 " Go crazy!
 if filereadable(expand("~/.nvimrc.local"))
